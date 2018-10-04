@@ -1,0 +1,10 @@
+M			//mass
+K			//spring stiffness
+ur			//damping ratio to critical damping coefficient
+disp_0		//initial displacement.
+velo_0		//initial velocity.
+Newmark_B	//newmark approach collocation parameter b.
+Newmark_R	//newmark approach collocation parameter r.
+gg			//viscous damping ratio propotional to the velocity.
+hh			//time step size.
+tt			//total time.
