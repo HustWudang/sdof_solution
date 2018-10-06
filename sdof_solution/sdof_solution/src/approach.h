@@ -39,6 +39,15 @@ class CNewmark_Implicit
 {
 public:
 	CSDoF *pSDoF;
+	double Newmark_B; //collocation parameter b in Newmark approach.
+	double Newmark_R; //collocation parameter r in Newmark approach.
+	double gg; //viscous damping ratio propotional to the velocity.
+	double hh; //time step size.
+	double tt; //total time.
+	vector<double> v_AccumTime;
+	vector<double> v_StepVelo;
+	vector<double> v_StepDisplAccum;
+	// implicit newmark-b-r analysis.
 	void Analysis();
 };
 
