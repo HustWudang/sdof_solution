@@ -57,6 +57,10 @@ void CNewmark_PredictorCorrector::Analysis()
 	v_StepDisplAccum.push_back(pSDoF->dDisplAccum_i);
 	while (t_accum < tt)
 	{
+		// update accumulated time.
+		i_accum++;
+		t_accum += hh;
+
 		// compute the displacemet and velocity
 		// at the end of current time step.
 		
@@ -74,13 +78,11 @@ void CNewmark_PredictorCorrector::Analysis()
 		// [#] viscous artificial damping proportional to the velocity.
 		pSDoF->dVelo_i = vn1 * gg;
 		pSDoF->dDisplAccum_i = dn1;
+		
 		// record.
 		v_AccumTime.push_back(t_accum);
 		v_StepVelo.push_back(pSDoF->dVelo_i);
 		v_StepDisplAccum.push_back(pSDoF->dDisplAccum_i);
-		// update accumulated time.
-		i_accum++;
-		t_accum += hh;
 	}
 
 	// output computation results.
