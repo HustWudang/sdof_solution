@@ -93,6 +93,22 @@ void CNewmark_PredictorCorrector::Analysis()
 		fout << "--------------------------------------------------\n";
 		fout << "### Mass point displacement & velocity record ####\n";
 		fout << "--------------------------------------------------\n";
+		fout << " m  = " << pSDoF->m << " kg \n";
+		fout << " k  = " << pSDoF->k << " N/m \n";
+		fout << " d0 = " << pSDoF->dDispl_0 << " m \n";
+		fout << " v0 = " << pSDoF->dVelo_0 << " m/s \n";
+		fout << " w  = " << pSDoF->w << " hz \n";
+		fout << " f  = " << pSDoF->f << " hz \n";
+		fout << " T  = " << pSDoF->T << " hz \n";
+		fout << " ur = " << pSDoF->ur << "\n";
+		fout << " uc = " << pSDoF->uc << " kg/s \n";
+		fout << "--------------------------------------------------\n";
+		fout << " Newmark_B  = " << Newmark_B << "\n";
+		fout << " Newmark_R  = " << Newmark_R << "\n";
+		fout << " gg in NPC  = " << gg << "\n";
+		fout << " step size  = " << hh << "\n";
+		fout << " total time = " << tt << "\n";
+		fout << "--------------------------------------------------\n";
 		fout << "| StepNo | StepAccumTime | DisplAccum | Velo |    \n";
 		fout << "--------------------------------------------------\n";
 		for (int is = 0; is <= i_accum; is++)
