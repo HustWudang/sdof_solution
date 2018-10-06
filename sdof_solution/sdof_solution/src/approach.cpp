@@ -99,7 +99,7 @@ void CNewmark_PredictorCorrector::Analysis()
 		fout << " v0 = " << pSDoF->dVelo_0 << " m/s \n";
 		fout << " w  = " << pSDoF->w << " hz \n";
 		fout << " f  = " << pSDoF->f << " hz \n";
-		fout << " T  = " << pSDoF->T << " hz \n";
+		fout << " T  = " << pSDoF->T << " s \n";
 		fout << " ur = " << pSDoF->ur << "\n";
 		fout << " uc = " << pSDoF->uc << " kg/s \n";
 		fout << "--------------------------------------------------\n";
